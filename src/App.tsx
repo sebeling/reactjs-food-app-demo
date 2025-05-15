@@ -1,19 +1,10 @@
-import { useAppSelector } from './app/hooks';
+import { RouterProvider } from 'react-router-dom';
+
+import router from './router/router';
 import './App.css';
 
 function App() {
-  const { items } = useAppSelector((state) => state.menu);
-
-  return (
-    <main>
-      <h1>Food App Demo</h1>
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
