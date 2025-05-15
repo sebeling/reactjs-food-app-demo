@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.top-nav ul li {
+    margin-left: 1rem;
+}
+
+.logo img {
+    height: auto;
+    width: 3rem;
+}
+
+.active {
+    color: red;
+}
