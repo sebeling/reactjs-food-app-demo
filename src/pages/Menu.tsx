@@ -2,9 +2,9 @@ import Menu from '../components/Menu/Menu';
 
 const MenuPage = () => {
   return (
-    <div>
+    <main>
       <Menu />
-    </div>
+    </main>
   );
 };
 

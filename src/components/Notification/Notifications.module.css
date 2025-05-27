@@ -1,0 +1,9 @@
+.notifications {
+    background-color: var(--blue-primary);
+    color: var( --gold-secondary);
+}
+
+.notification {
+    padding: 1rem 1.875rem;
+    text-align: center;
+}
