@@ -1,4 +1,38 @@
-# React + TypeScript + Vite
+## reactjs-food-app-demo
+
+A demo project of a fictitious restaurant built in the Next.js framework using React, TypeScript, Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, SQLite, and other modern web development technologies.
+
+Please note that this project includes a backend applicaiton that must be running for the menu items data to be accessible to the front-end applicaiton.
+
+## Back-End Application.
+
+First, run the development server:
+
+- In a terminal window, cd into the backend folder.
+- Run npm install
+- Run npm start
+
+Open [http://localhost:8080/menu-items](http://localhost:8080/menu-items) with your browser to see the menu items data stored within the SQLite database.
+
+## Front-End Application.
+
+First, open a seperate terminal window (2 are needed for running FE and BE applicaitons)
+
+Next, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,15 +62,15 @@ export default tseslint.config({
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config({
   plugins: {
@@ -50,5 +84,15 @@ export default tseslint.config({
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
-})
+});
 ```
+
+## Storybook
+
+This project leverages Storybook for isolated front-end component development, documentation, and testing.
+
+To run the storybook server:
+
+- Open a third termial window
+- cd to the project's root directory
+- Run npm run storybook
