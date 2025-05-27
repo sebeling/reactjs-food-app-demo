@@ -1,0 +1,49 @@
+.hero {
+    align-items: center;
+    background-image: url('http://localhost:8080/images/dining-room.avif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 375px;
+    width: 100%;
+}
+
+.hero .title-container {
+    display: flex;
+}
+
+.hero .title-col {
+    margin: 0 .75rem;
+    position: relative;
+}
+
+.hero .title-item-1s {
+    position: absolute;
+    top: 0;
+    animation: slideUp 1s ease-in;
+}
+
+.hero .title-item-2s {
+    position: absolute;
+    top: 0;
+    animation: slideUp 2s ease-in;
+}
+
+.hero .title-item-3s {
+    position: absolute;
+    top: 0;
+    animation: slideUp 3s ease-in;
+}
+
+.hero .title {
+    font-size: 6rem;
+    font-family: var(--font-secondary);
+    line-height: 5rem;
+}
+
+@keyframes slideUp {
+  from {top: 180px; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}

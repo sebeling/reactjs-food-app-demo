@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 
-import logo from '../../assets/icon.jpg';
+// import logo from '../../assets/icon.jpg';
 import styles from './TopNavigation.module.css';
 
 const TopNavigation: React.FC = () => {
@@ -8,7 +8,11 @@ const TopNavigation: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link to="/">
-          <img src={logo} alt="Food App Logo" />
+          <img
+            src="http://localhost:8080/images/logo.jpeg"
+            alt="Food App Logo"
+          />
+          <span>Taste. Savor. Repeat.</span>
         </Link>
       </div>
       <nav className={styles['top-nav']} aria-label="Main Navigation">
@@ -32,6 +36,62 @@ const TopNavigation: React.FC = () => {
             >
               Menu
             </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/hours-and-location"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Hours & Location
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/reservations"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Reservations
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <button
+              className={styles.cartBtn}
+              aria-label="Cart with 0 items"
+              aria-controls="cart-control"
+              aria-expanded="false"
+            >
+              <div aria-hidden="true" className={styles['cartBtn-wrapper']}>
+                <svg
+                  className="cartIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="18"
+                  viewBox="0 0 14 18"
+                >
+                  <path
+                    d="M5.12112 16.5H12.6368V5.22649H1.36328V16.5L3.2422 14.6211L5.12112 16.5ZM5.12112 16.5V5.22649M3.24219 5.22652V3.59813C3.24219 3.59813 3.21088 1.5 5.12111 1.5C6.96871 1.5 7.00003 3.59813 7.00003 3.59813M7.00003 3.59813V5.22652M7.00003 3.59813C7.00003 3.59813 6.96871 1.5 8.87895 1.5C10.7266 1.5 10.7579 3.59813 10.7579 3.59813V5.22652"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                Cart (0)
+              </div>
+            </button>
           </li>
         </ul>
       </nav>
