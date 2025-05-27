@@ -1,12 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Design token variables */
+  --blue-primary: #092963;
+  --black-primary: #000;
+  --white-primary: #fff;
+  --gold-primary: #817544;
+  --gold-secondary: #DCC48C;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --base-font-size: 1em;
+  --font-weight-light: 100;
+  --font-weight-normal: 400;  
+  --font-weight-bold: 700;
+  --font-primary: "Montserrat";
+  --font-secondary: "Bodoni Moda";
+  --font-fallback: sans-serif;
 
+  --small-bp: 481px; /* Small tablets and larger mobile devices (481px - 768px) */
+  --medium-bp: 769px; /* Tablets and small laptops (769px - 1024px) */
+  --large-bp: 1025px; /* Large desktops and high-resolution screens (1025px and up) */
+  --xlarge-bp: 1440px; /* Extra-large screens (1440px and up) */
+
+  --drop-shadow--65: drop-shadow(1px 1px 4px rgba(0,0,0,0.65));
+
+  --outer-component-padding: 1.875rem;
+
+  font-family: var(--font-fallback);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,47 +34,123 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
+
 a:hover {
-  color: #535bf2;
+  text-decoration: underline;
 }
 
 body {
+  background-color: var(--black-primary);
+  color: var(--white-primary);
+  font-family: var(--font-primary);
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0;
+  /* line-height: 1.5rem; */
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  width: 100%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-secondary);
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+p {
+  margin-block: 0;
+}
+
+a.cta {
+  background-color: var(--blue-primary);
+  border: var(--gold-primary) solid 2px;
+  border-radius: 3rem;
+  color: var(--white-primary);
+  font-family: var(--font-secondary);
+  font-size: .9rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+
+a.cta:hover {
+  color: var(--gold-primary);
+  text-decoration: none;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.fade-in-element-1s {
+  animation: fadeIn 1s ease-in;
+}
+
+.fade-in-element-2s {
+  animation: fadeIn 2s ease-in;
+}
+
+.fade-in-element-3s {
+  animation: fadeIn 3s ease-in;
+}
+
+.fade-in-element-4s {
+  animation: fadeIn 4s ease-in;
+}
+
+/* Small tablets and larger mobile devices (481px - 768px) */
+@media (min-width: var(--small-bp)) {
+}
+
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: var(--medium-bp)) {
+}
+
+/* Large desktops and high-resolution screens (1025px and up) */
+@media (min-width: var(--large-bp)) {
+}
+
+/* Extra-large screens (1440px and up) */
+@media (min-width: var(--xlarge-bp)) {
+}
+
+/* Accessibility */
+@media screen and (prefers-reduced-motion: reduce) {  
+  * {
+    /* Very short durations means JavaScript that relies on events still works */
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +161,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
