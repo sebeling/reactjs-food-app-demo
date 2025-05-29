@@ -24,13 +24,17 @@ const TwoColumnBlade: React.FC<TwoColumnBladeProps> = ({
 
   const infoContent = <div className={styles['info-content']}>{children}</div>;
 
-  const leftColContent = flipColumns ? infoContent : imageContent;
-  const rightColContent = flipColumns ? imageContent : infoContent;
+  const leftColOrderClass = flipColumns ? styles.right : styles.left;
+  const rightColOrderClass = flipColumns ? styles.left : styles.right;
 
   return (
     <section className={styles['two-col-blade']}>
-      <div className={styles['left-col']}>{leftColContent}</div>
-      <div className={styles['right-col']}>{rightColContent}</div>
+      <div className={`${styles['left-col']} ${leftColOrderClass}`}>
+        {infoContent}
+      </div>
+      <div className={`${styles['right-col']} ${rightColOrderClass}`}>
+        {imageContent}
+      </div>
     </section>
   );
 };
