@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
@@ -103,6 +103,14 @@ a.cta:hover {
   display: none;
 }
 
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 @keyframes fadeIn {
   from {opacity: 0}
   to {opacity: 1}
@@ -125,19 +133,22 @@ a.cta:hover {
 }
 
 /* Small tablets and larger mobile devices (481px - 768px) */
-@media (min-width: var(--small-bp)) {
+@media (min-width: 481px) {
 }
 
 /* Tablets and small laptops (769px - 1024px) */
-@media (min-width: var(--medium-bp)) {
+@media (min-width: 769px) {
+  h2 {
+    font-size: 1.875rem;
+  }
 }
 
 /* Large desktops and high-resolution screens (1025px and up) */
-@media (min-width: var(--large-bp)) {
+@media (min-width: 1025px) {
 }
 
 /* Extra-large screens (1440px and up) */
-@media (min-width: var(--xlarge-bp)) {
+@media (min-width: 1440px) {
 }
 
 /* Accessibility */

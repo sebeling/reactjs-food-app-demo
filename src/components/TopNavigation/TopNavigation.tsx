@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-// import logo from '../../assets/icon.jpg';
+import TopNavButton from '../TopNavButton/TopNavButton';
 import styles from './TopNavigation.module.css';
 
 const TopNavigation: React.FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleTopNavBtnClick = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const navClasses = isNavOpen
+    ? `${styles['top-nav']} ${styles.visible}`
+    : styles['top-nav'];
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -15,7 +26,7 @@ const TopNavigation: React.FC = () => {
           <span>Taste. Savor. Repeat.</span>
         </Link>
       </div>
-      <nav className={styles['top-nav']} aria-label="Main Navigation">
+      <nav className={navClasses} aria-label="Main Navigation">
         <ul>
           <li>
             <NavLink
@@ -95,6 +106,7 @@ const TopNavigation: React.FC = () => {
           </li>
         </ul>
       </nav>
+      <TopNavButton isOpen={isNavOpen} onClick={handleTopNavBtnClick} />
     </header>
   );
 };
