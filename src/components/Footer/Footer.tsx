@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles['footer-content']}>
         <nav className={styles['footer-nav']}>
           <ul>
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         &#x2022; <a href="tel:2062908889">(206) 290-8889</a>&#x2022;
         <a href="mailto:steve.ebeling@gmail.com">steve.ebeling@gmail.com</a>
       </div>
-    </div>
+    </footer>
   );
 };
 
