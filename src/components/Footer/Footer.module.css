@@ -10,6 +10,8 @@
 .footer-nav ul {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
     justify-content: space-evenly;
     list-style: none;
 }
@@ -44,4 +46,12 @@
 .footer .info-bar a {
     color: var(--white-primary);
     padding: 0 1rem;
+}
+
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: 769px) {
+    .footer-nav ul {
+        flex-direction: row;
+        row-gap: 0;
+    }
 }
