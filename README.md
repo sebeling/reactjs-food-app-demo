@@ -1,6 +1,6 @@
 ## reactjs-food-app-demo
 
-A demo project of a fictitious restaurant built in the Next.js framework using React, TypeScript, Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, SQLite, and other modern web development technologies.
+A demo project (in progress) of a fictitious restaurant built using React, TypeScript, Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, SQLite, and other modern web development technologies built by Senior Front-End Developer Steven Ebeling.
 
 Please note that this project includes a backend applicaiton that must be running for the menu items data to be accessible to the front-end applicaiton.
 
@@ -89,7 +89,7 @@ export default tseslint.config({
 
 ## Storybook
 
-This project leverages Storybook for isolated front-end component development, documentation, and testing.
+Additionally, this project leverages Storybook for isolated front-end component development, documentation, and testing.
 
 To run the storybook server:
 

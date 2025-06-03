@@ -1,3 +1,18 @@
+.two-col-blade.image-top-mobile {
+    display: flex;
+    flex-wrap: wrap;
+
+    .right-col {
+        order: 0;
+        min-height: 30vh;
+    }
+
+    .left-col {
+        order: 1;
+        min-height: 45vh;
+    }
+}
+
 .left-col,
 .right-col {
     display: flex;
@@ -59,6 +74,15 @@
 
     h2 {
         font-size: 1.875rem;
+    }
+
+    .two-col-blade.image-top-mobile {
+        .left-col,
+        .right-col {
+            flex: 1 0 50%;
+            min-height: 65vh;
+            order: inherit;
+        }
     }
 }
 

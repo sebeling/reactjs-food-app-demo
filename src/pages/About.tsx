@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="placeholder-page">
       <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

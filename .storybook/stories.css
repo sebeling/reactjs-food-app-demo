@@ -1,0 +1,4 @@
+.sb_show > :first-child {
+    display: flex;
+    position: relative;
+}

@@ -6,6 +6,7 @@ import { store } from '../src/store/store';
 
 // Import Global Styles from React app
 import '../src/index.css';
+import './stories.css';
 
 const preview: Preview = {
   parameters: {

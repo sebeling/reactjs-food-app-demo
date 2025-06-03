@@ -1,6 +1,6 @@
 const HoursAndLocation = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="placeholder-page">
       <h1>Hours &amp; Location</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

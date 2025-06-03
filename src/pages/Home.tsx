@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero title="Taste. Savor. Repeat." />
-      <TwoColumnBlade image="/images/private-events.avif" flipColumns={false}>
+      <TwoColumnBlade image="images/private-events.avif" flipColumns={false}>
         <h2>Private Events</h2>
         <div>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -21,7 +21,7 @@ const HomePage = () => {
           Private Event Info
         </Link>
       </TwoColumnBlade>
-      <TwoColumnBlade image="/images/bar-seating.avif" flipColumns={true}>
+      <TwoColumnBlade image="images/bar-seating.avif" flipColumns={true}>
         <h2>Our hours & location</h2>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

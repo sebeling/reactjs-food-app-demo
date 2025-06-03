@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BrowserRouter } from 'react-router-dom';
 
-import Menu from './Menu';
+import CartModal from './CartModal';
 
 const meta = {
-  title: 'Components/Menu',
-  component: Menu,
+  title: 'Components/CartModal',
+  component: CartModal,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
@@ -14,13 +13,13 @@ const meta = {
   decorators: [
     (Story) => {
       return (
-        <BrowserRouter>
+        <div className="sb_show">
           <Story />
-        </BrowserRouter>
+        </div>
       );
     },
   ],
-} satisfies Meta<typeof Menu>;
+} satisfies Meta<typeof CartModal>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
