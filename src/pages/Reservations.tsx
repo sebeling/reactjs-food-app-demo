@@ -1,6 +1,6 @@
 const Reservations = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="placeholder-page">
       <h1>Reservations</h1>
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem

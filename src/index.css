@@ -123,6 +123,16 @@ a.cta:hover {
   width: 1px;
 }
 
+.placeholder-page {
+  margin-bottom: 2rem;
+  padding: 0 var(--outer-component-padding);
+  text-align: center;
+}
+
+.placeholder-page h1 {
+  margin-bottom: 1rem;
+}
+
 @keyframes fadeIn {
   from {opacity: 0}
   to {opacity: 1}

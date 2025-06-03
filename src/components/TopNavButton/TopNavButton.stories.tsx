@@ -13,7 +13,7 @@ const meta = {
   decorators: [
     (Story) => {
       return (
-        <div style={{ position: 'relative' }}>
+        <div className="sb_show">
           <Story />
         </div>
       );

@@ -1,11 +1,20 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { uiActions } from '../../store/slices/uiSlice';
 import TopNavButton from '../TopNavButton/TopNavButton';
 import styles from './TopNavigation.module.css';
 
 const TopNavigation: React.FC = () => {
+  const dispatch = useAppDispatch();
+
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const cartItems = useAppSelector((state) => state.cart.items);
+  const totalCartItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const handleTopNavBtnClick = () => {
     setIsNavOpen(!isNavOpen);
@@ -84,6 +93,7 @@ const TopNavigation: React.FC = () => {
               aria-label="Cart with 0 items"
               aria-controls="cart-control"
               aria-expanded="false"
+              onClick={() => dispatch(uiActions.toggleCartModal())}
             >
               <div aria-hidden="true" className={styles['cartBtn-wrapper']}>
                 <svg
@@ -95,12 +105,12 @@ const TopNavigation: React.FC = () => {
                 >
                   <path
                     d="M5.12112 16.5H12.6368V5.22649H1.36328V16.5L3.2422 14.6211L5.12112 16.5ZM5.12112 16.5V5.22649M3.24219 5.22652V3.59813C3.24219 3.59813 3.21088 1.5 5.12111 1.5C6.96871 1.5 7.00003 3.59813 7.00003 3.59813M7.00003 3.59813V5.22652M7.00003 3.59813C7.00003 3.59813 6.96871 1.5 8.87895 1.5C10.7266 1.5 10.7579 3.59813 10.7579 3.59813V5.22652"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></path>
                 </svg>
-                Cart (0)
+                Cart ({totalCartItems})
               </div>
             </button>
           </li>
