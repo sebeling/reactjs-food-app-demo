@@ -25,7 +25,7 @@ const TopNavigation: React.FC = () => {
     : styles['top-nav'];
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-testid="top-navigation">
       <div className={styles.logo}>
         <Link to="/">
           <img
@@ -35,7 +35,11 @@ const TopNavigation: React.FC = () => {
           <span>Taste. Savor. Repeat.</span>
         </Link>
       </div>
-      <nav className={navClasses} aria-label="Main Navigation">
+      <nav
+        className={navClasses}
+        aria-label="Main Navigation"
+        data-testid="top-navigation-nav"
+      >
         <ul>
           <li>
             <NavLink
@@ -80,6 +84,7 @@ const TopNavigation: React.FC = () => {
           <li>
             <NavLink
               to="/about"
+              data-testid="about-nav-link"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
@@ -90,10 +95,11 @@ const TopNavigation: React.FC = () => {
           <li>
             <button
               className={styles.cartBtn}
-              aria-label="Cart with 0 items"
+              aria-label={`Cart with ${totalCartItems} items`}
               aria-controls="cart-control"
               aria-expanded="false"
               onClick={() => dispatch(uiActions.toggleCartModal())}
+              data-testid="cart-button"
             >
               <div aria-hidden="true" className={styles['cartBtn-wrapper']}>
                 <svg
@@ -116,7 +122,11 @@ const TopNavigation: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <TopNavButton isOpen={isNavOpen} onClick={handleTopNavBtnClick} />
+      <TopNavButton
+        isOpen={isNavOpen}
+        onClick={handleTopNavBtnClick}
+        data-testid="top-nav-btn"
+      />
     </header>
   );
 };

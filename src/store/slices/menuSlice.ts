@@ -1,23 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 import { type MenuContext } from '../../interfaces/MenuContext';
+import { type MenuItemInfo } from '../../interfaces/MenuItemInfo';
 
-const getInitialState = async (): Promise<MenuContext> => {
-  const response = await fetch('http://localhost:8080/menu-items');
-
-  if (!response.ok) {
-    console.error('Failed to fetch menu items data!');
-    return { items: [] };
-  }
-
-  const items = await response.json();
-  return { items };
+const initialState: MenuContext = {
+  items: [],
 };
 
 export const menuSlice = createSlice({
   name: 'menu',
-  initialState: await getInitialState(),
-  reducers: {},
+  initialState,
+  reducers: {
+    addItems: (state, action: PayloadAction<MenuItemInfo[]>) => {
+      state.items = action.payload;
+    },
+  },
 });
 
 export const menuActions = menuSlice.actions;

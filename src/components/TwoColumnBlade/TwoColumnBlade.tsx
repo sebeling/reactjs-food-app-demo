@@ -31,7 +31,10 @@ const TwoColumnBlade: React.FC<TwoColumnBladeProps> = ({
   const imageTopMobileClass = imageTopMobile ? styles['image-top-mobile'] : '';
 
   return (
-    <section className={`${styles['two-col-blade']} ${imageTopMobileClass}`}>
+    <section
+      className={`${styles['two-col-blade']} ${imageTopMobileClass}`}
+      data-testid="two-col-blade"
+    >
       <div className={`${styles['left-col']} ${leftColOrderClass}`}>
         {infoContent}
       </div>

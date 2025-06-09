@@ -9,7 +9,7 @@ export interface MenuSectionProps {
 
 const MenuSection: React.FC<MenuSectionProps> = ({ title, items }) => {
   return (
-    <div className={styles['menu-section']}>
+    <div className={styles['menu-section']} data-testid="menu-section">
       <h2>{title}</h2>
       <ul>
         {items.map((item) => (

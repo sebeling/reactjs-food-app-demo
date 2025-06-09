@@ -48,6 +48,7 @@ const CartModal: React.FC = () => {
       ref={dialogRef}
       onClose={handleCloseModal}
       onClick={handleClickModal}
+      data-testid="cart-modal"
     >
       <div className={styles['cart-modal-content']}>
         <section className={styles['cart-modal-header']}>
@@ -77,7 +78,10 @@ const CartModal: React.FC = () => {
             </svg>
           </button>
         </section>
-        <section className={styles['cart-modal-body']}>
+        <section
+          className={styles['cart-modal-body']}
+          data-testid="cart-modal-body"
+        >
           {cartItems.length > 0 && (
             <ul>
               {cartItems.map((cartItem) => (
