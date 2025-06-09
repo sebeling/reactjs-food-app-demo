@@ -10,7 +10,7 @@ const Menu: React.FC = () => {
   const desserts = items.filter((item) => item.type.includes('dessert'));
 
   return (
-    <div className={styles.menu}>
+    <div className={styles.menu} data-testid="menu">
       <MenuSection title="Appetizers" items={appetizers} />
       <MenuSection title="Entrees" items={entrees} />
       <MenuSection title="Desserts" items={desserts} />

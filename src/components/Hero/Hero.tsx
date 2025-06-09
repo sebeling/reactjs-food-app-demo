@@ -8,7 +8,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
   const values = title.split(' ');
 
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} data-testid="hero">
       <div
         className={styles['title-container']}
         aria-label={values.join(' ')}

@@ -13,7 +13,11 @@ const TopNavButton: React.FC<TopNavButtonProps> = ({ isOpen, onClick }) => {
   const navBtnLabel = isOpen ? 'Close' : 'Toggle Navigation';
 
   return (
-    <button className={btnOpenClass} onClick={onClick}>
+    <button
+      className={btnOpenClass}
+      onClick={onClick}
+      data-testid="top-nav-btn"
+    >
       <span className="sr-only">{navBtnLabel}</span>
       <span className={styles['top-nav-btn-line']}></span>
       <span className={styles['top-nav-btn-line']}></span>

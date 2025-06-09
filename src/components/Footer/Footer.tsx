@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-testid="footer">
       <div className={styles['footer-content']}>
         <nav className={styles['footer-nav']}>
           <ul>

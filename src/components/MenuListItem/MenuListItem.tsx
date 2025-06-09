@@ -12,7 +12,7 @@ const MenuListItem: React.FC<MenuListItemProps> = ({ item }) => {
   const { slug, name, image, description, price } = item;
 
   return (
-    <li className={styles['menu-list-item']}>
+    <li className={styles['menu-list-item']} data-testid="menu-list-item">
       <Link to={`/menu/${slug}`} className={styles['menu-list-item-link']}>
         <img src={`http://localhost:8080/${image}`} alt={name} />
         <div className={styles['menu-list-item-content']}>

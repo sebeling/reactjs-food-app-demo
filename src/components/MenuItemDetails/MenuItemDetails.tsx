@@ -10,7 +10,10 @@ export interface MenuItemDetailsProps {
 
 const MenuItemDetails: React.FC<MenuItemDetailsProps> = ({ item }) => {
   return (
-    <div className={styles['menu-item-details']}>
+    <div
+      className={styles['menu-item-details']}
+      data-testid="menu-item-details"
+    >
       <Link to="/menu" className={styles['menu-item-details-back']}>
         Back to Menu
       </Link>

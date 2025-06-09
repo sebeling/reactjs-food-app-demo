@@ -19,21 +19,26 @@ const AddToCart: React.FC<AddToCartProps> = ({ item }) => {
   const cartQuantity = cartInfo ? cartInfo.quantity : 0;
 
   return (
-    <div className={styles['add-to-cart']}>
+    <div className={styles['add-to-cart']} data-testid="add-to-cart">
       <div className={styles['add-to-cart-quantity']}>
         <button
           onClick={() => dispatch(cartActions.removeItemFromCart(item.id))}
+          data-testid="cart-decrement-btn"
         >
           -
         </button>
         <span>{cartQuantity}</span>
-        <button onClick={() => dispatch(cartActions.addItemToCart(item))}>
+        <button
+          onClick={() => dispatch(cartActions.addItemToCart(item))}
+          data-testid="cart-increment-btn"
+        >
           +
         </button>
       </div>
       <button
         className={styles['add-to-cart-btn']}
         onClick={() => dispatch(cartActions.addItemToCart(item))}
+        data-testid="add-to-cart-btn"
       >
         Add to Cart - {convertNumberToUSDollars(item.price)}
       </button>
